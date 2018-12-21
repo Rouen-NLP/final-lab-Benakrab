@@ -53,7 +53,7 @@ The main limits are due to the size and the distribution of our dataset that is 
     * Performing data augmentation in the case where collecting more data can not be done <br>
     * Using downsampling and upsampling methods to deal with unbalanced classes, or assign weights to each class according to their frequencies <br>
     * Training models that deal with such cases (e.g. random forest class_weight="balanced") <br>
-    * ....
+    * .... <br>
 More work can be done on the data side. In the same way, we can enhance the present work from the models side. For instance : <br>
     * Optimize the hyperparameters, using *Grid Search Cross-Validation*, attached to the vectorizing process (e.g. max_features, max_df, min_df, use_idf, ngram_range, ...) <br>
     * Do the same for the neural network and the MLP classifiers <br>
