@@ -12,38 +12,38 @@ In this work, the methodology followed is : <br>
     that takes into account the distribution of our classes <br>
     * The modelisation stage consists of selecting a model that performs well according to 
     some metric, the accuracy for instance. Naturally, hyperparameters optimization and 
-    error analysis will be realized too.
+    error analysis will be realized too <br>
     * After choosing a model, we will create a python script that can be run through the command 
-    line and performs the previous steps.
+    line and performs the previous steps. <br>
     * Finally, some limits and perspectives will be presented.
     
 # Data Extraction and Processing
 
-Among the difficulties encountered during the extraction phase :
-    * The provided csv file contains the paths to the images and not to the text files
-    * Our text files contain many text lines
-    * The text files contain stopwords and special characters
+Among the difficulties encountered during the extraction phase : <br>
+    * The provided csv file contains the paths to the images and not to the text files <br>
+    * Our text files contain many text lines <br>
+    * The text files contain stopwords and special characters <br>
     * We detected missing data from a very few text files
-To fix these issues, we defined a function named *extract_text* that : 
-    * loops over the input csv file
-    * Changes the image paths to a text paths
+To fix these issues, we defined a function named *extract_text* that : <br>
+    * loops over the input csv file <br>
+    * Changes the image paths to a text paths <br>
     * Converts the text, for each document, to a single line ; after removing stopwords,
-    special and control characters
-    * Extracts the text
-    * Handles the empty files by ignoring them
-    * Saves the paths of the empty files to keep a state record
-    * Creates the ouput csv file that contains the paths, the classes and the extracted text
-    * Return the list of empty files and its length
+    special and control characters <br>
+    * Extracts the text <br>
+    * Handles the empty files by ignoring them <br>
+    * Saves the paths of the empty files to keep a state record <br>
+    * Creates the ouput csv file that contains the paths, the classes and the extracted text <br>
+    * Return the list of empty files and its length <br>
 As a result, we detected 32 empty text files.
     
 # Data Exploration
 
-To get some insights about our extracted data, we converted the produced csv file to a pandas dataframe and realized the following :
-    * Verify the dimensions
-    * Verify that there is no missing values
-    * Plot the word frequency histogram that shows the most common words in our dataset
-    * Produce some charts that describe the distribution of our classes
-    * Take into account this distribution when spliting our data to train, dev and test 
+To get some insights about our extracted data, we converted the produced csv file to a pandas dataframe and realized the following : <br>
+    * Verify the dimensions <br>
+    * Verify that there is no missing values <br>
+    * Plot the word frequency histogram that shows the most common words in our dataset <br>
+    * Produce some charts that describe the distribution of our classes <br>
+    * Take into account this distribution when spliting our data to train, dev and test <br>
     (stratify)
 Our dataset contains 3450 observations with no missing values. The most common word in our documents is *Tobacco* ; returning clearly the context of our data. The distribution of our classes is unbalanced. A Jupyter notebook was produced showing explicitly the results.
 
@@ -55,20 +55,20 @@ A Neural Network classifier is build too. The results achieved are reasonably go
 # Limits and Perspectives
 
 The main limits are due to the size and the distribution of our dataset that is unbalanced. Indeed, the data in possession is not large enough to train perfectly our neural network. As a solution, one
-can handle these issues by :
+can handle these issues by : <br>
     * making more preprocessing. for instance, we can consider "smoking" and "smoke" as 
-    identical words.
-    * collect more data, especially from the minority classes
-    * performing data augmentation in the case where collecting more data can not be done
+    identical words. <br>
+    * collect more data, especially from the minority classes <br>
+    * performing data augmentation in the case where collecting more data can not be done <br>
     * using downsampling and upsampling methods to deal with unbalanced classes, or assign weights
-    to each class according to their frequencies
-    * training models that deal with such cases (e.g. random forest class_weight="balanced")
+    to each class according to their frequencies <br>
+    * training models that deal with such cases (e.g. random forest class_weight="balanced") <br>
     * ....
 More work can be done on the data side. In the same way, we can enhance the present work from the models side. For instance :
     * Optimize the hyperparameters, using *Grid Search Cross-Validation*, attached to the
-    vectorizing process (e.g. max_features, max_df, min_df, use_idf, ngram_range, ...)
-    * Do the same for the neural network and the MLP classifiers
-    * Train our SVM classifier with more data, as showed in the learning curves
+    vectorizing process (e.g. max_features, max_df, min_df, use_idf, ngram_range, ...) <br>
+    * Do the same for the neural network and the MLP classifiers <br>
+    * Train our SVM classifier with more data, as showed in the learning curves <br>
     * ..........
     
 # Attached Files
