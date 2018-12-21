@@ -7,14 +7,9 @@ We have in our possesion a random sample of the documents that contains : <br>
     * A csv file that contains the paths of images and their corresponding classes <br>
 In this work, the methodology followed is : <br>
     * First, we will create a *Pandas* dataframe that contains, for each row, the path to the text file, the class of the document and the extracted text. As may be expected, some preprocessing operations will be performed <br>
-    * After the phase of data acquisition, we will investigate and get more insights about our 
-    dataset using charts and descriptive statistics in order to achieve a data split operation 
-    that takes into account the distribution of our classes <br>
-    * The modelisation stage consists of selecting a model that performs well according to 
-    some metric, the accuracy for instance. Naturally, hyperparameters optimization and 
-    error analysis will be realized too <br>
-    * After choosing a model, we will create a python script that can be run through the command 
-    line and performs the previous steps. <br>
+    * After the phase of data acquisition, we will investigate and get more insights about our dataset using charts and descriptive statistics in order to achieve a data split operation that takes into account the distribution of our classes <br>
+    * The modelisation stage consists of selecting a model that performs well according to some metric, the accuracy for instance. Naturally, hyperparameters optimization and error analysis will be realized too <br>
+    * After choosing a model, we will create a python script that can be run through the command line and performs the previous steps. <br>
     * Finally, some limits and perspectives will be presented.
     
 # Data Extraction and Processing
@@ -27,8 +22,7 @@ Among the difficulties encountered during the extraction phase : <br>
 To fix these issues, we defined a function named *extract_text* that : <br>
     * loops over the input csv file <br>
     * Changes the image paths to a text paths <br>
-    * Converts the text, for each document, to a single line ; after removing stopwords,
-    special and control characters <br>
+    * Converts the text, for each document, to a single line ; after removing stopwords, special and control characters <br>
     * Extracts the text <br>
     * Handles the empty files by ignoring them <br>
     * Saves the paths of the empty files to keep a state record <br>
@@ -43,8 +37,7 @@ To get some insights about our extracted data, we converted the produced csv fil
     * Verify that there is no missing values <br>
     * Plot the word frequency histogram that shows the most common words in our dataset <br>
     * Produce some charts that describe the distribution of our classes <br>
-    * Take into account this distribution when spliting our data to train, dev and test <br>
-    (stratify)
+    * Take into account this distribution when spliting our data to train, dev and test (stratify)<br>
 Our dataset contains 3450 observations with no missing values. The most common word in our documents is *Tobacco* ; returning clearly the context of our data. The distribution of our classes is unbalanced. A Jupyter notebook was produced showing explicitly the results.
 
 # Building models
@@ -54,19 +47,15 @@ A Neural Network classifier is build too. The results achieved are reasonably go
 
 # Limits and Perspectives
 
-The main limits are due to the size and the distribution of our dataset that is unbalanced. Indeed, the data in possession is not large enough to train perfectly our neural network. As a solution, one
-can handle these issues by : <br>
-    * Making more preprocessing. for instance, we can consider "smoking" and "smoke" as 
-    identical words. <br>
+The main limits are due to the size and the distribution of our dataset that is unbalanced. Indeed, the data in possession is not large enough to train perfectly our neural network. As a solution, one can handle these issues by : <br>
+    * Making more preprocessing. for instance, we can consider "smoking" and "smoke" as identical words. <br>
     * Collect more data, especially from the minority classes <br>
     * Performing data augmentation in the case where collecting more data can not be done <br>
-    * Using downsampling and upsampling methods to deal with unbalanced classes, or assign weights
-    to each class according to their frequencies <br>
+    * Using downsampling and upsampling methods to deal with unbalanced classes, or assign weights to each class according to their frequencies <br>
     * Training models that deal with such cases (e.g. random forest class_weight="balanced") <br>
     * ....
 More work can be done on the data side. In the same way, we can enhance the present work from the models side. For instance : <br>
-    * Optimize the hyperparameters, using *Grid Search Cross-Validation*, attached to the
-    vectorizing process (e.g. max_features, max_df, min_df, use_idf, ngram_range, ...) <br>
+    * Optimize the hyperparameters, using *Grid Search Cross-Validation*, attached to the vectorizing process (e.g. max_features, max_df, min_df, use_idf, ngram_range, ...) <br>
     * Do the same for the neural network and the MLP classifiers <br>
     * Train our SVM classifier with more data, as showed in the learning curves <br>
     * ..........
