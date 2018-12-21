@@ -57,7 +57,7 @@ The main limits are due to the size and the distribution of our dataset that is 
 More work can be done on the data side. In the same way, we can enhance the present work from the models side. For instance : <br>
     * Optimize the hyperparameters, using *Grid Search Cross-Validation*, attached to the vectorizing process (e.g. max_features, max_df, min_df, use_idf, ngram_range, ...) <br>
     * Do the same for the neural network and the MLP classifiers <br>
-    * Train our SVM classifier with more data, as showed in the learning curves <br>
+    * Train our SVM classifier with more data, as shown in the learning curves <br>
     * ..........
     
 # Attached Files
