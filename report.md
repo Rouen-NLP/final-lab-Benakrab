@@ -64,7 +64,7 @@ can handle these issues by : <br>
     to each class according to their frequencies <br>
     * training models that deal with such cases (e.g. random forest class_weight="balanced") <br>
     * ....
-More work can be done on the data side. In the same way, we can enhance the present work from the models side. For instance :
+More work can be done on the data side. In the same way, we can enhance the present work from the models side. For instance : <br>
     * Optimize the hyperparameters, using *Grid Search Cross-Validation*, attached to the
     vectorizing process (e.g. max_features, max_df, min_df, use_idf, ngram_range, ...) <br>
     * Do the same for the neural network and the MLP classifiers <br>
