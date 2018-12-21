@@ -1,15 +1,15 @@
 # Context and Methodology
 
-In the famous lawsuit against American tobacco companies, 14 million documents were collected and digitized. In order to facilitate the use of these documents by the lawyers, we are in charge of setting up an automatic classification task.
-We have in our possesion a random sample of the documents that contains :
-    * Images of documents in jpeg format
-    * The extracted text from images by an optical character recognition technology
-    * A csv file that contains the paths of images and their corresponding classes
-In this work, the methodology followed is :
-    * First, we will create a *Pandas* dataframe that contains, for each row, the path to the text file, the class of the document and the extracted text. As may be expected, some preprocessing operations will be performed
+In the famous lawsuit against American tobacco companies, 14 million documents were collected and digitized. In order to facilitate the use of these documents by the lawyers, we are in charge of setting up an automatic classification task. <br>
+We have in our possesion a random sample of the documents that contains : <br>
+    * Images of documents in jpeg format <br>
+    * The extracted text from images by an optical character recognition technology <br>
+    * A csv file that contains the paths of images and their corresponding classes <br>
+In this work, the methodology followed is : <br>
+    * First, we will create a *Pandas* dataframe that contains, for each row, the path to the text file, the class of the document and the extracted text. As may be expected, some preprocessing operations will be performed <br>
     * After the phase of data acquisition, we will investigate and get more insights about our 
     dataset using charts and descriptive statistics in order to achieve a data split operation 
-    that takes into account the distribution of our classes
+    that takes into account the distribution of our classes <br>
     * The modelisation stage consists of selecting a model that performs well according to 
     some metric, the accuracy for instance. Naturally, hyperparameters optimization and 
     error analysis will be realized too.
