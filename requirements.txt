@@ -1,0 +1,9 @@
+re==2.2.1
+csv==1.0
+pandas==0.20.3
+numpy==1.15.1
+sklearn==0.19.1
+matplotlib==2.1.0
+nltk==3.2.4
+keras==2.2.4
+seaborn==0.9.0
