@@ -56,13 +56,13 @@ A Neural Network classifier is build too. The results achieved are reasonably go
 
 The main limits are due to the size and the distribution of our dataset that is unbalanced. Indeed, the data in possession is not large enough to train perfectly our neural network. As a solution, one
 can handle these issues by : <br>
-    * making more preprocessing. for instance, we can consider "smoking" and "smoke" as 
+    * Making more preprocessing. for instance, we can consider "smoking" and "smoke" as 
     identical words. <br>
-    * collect more data, especially from the minority classes <br>
-    * performing data augmentation in the case where collecting more data can not be done <br>
-    * using downsampling and upsampling methods to deal with unbalanced classes, or assign weights
+    * Collect more data, especially from the minority classes <br>
+    * Performing data augmentation in the case where collecting more data can not be done <br>
+    * Using downsampling and upsampling methods to deal with unbalanced classes, or assign weights
     to each class according to their frequencies <br>
-    * training models that deal with such cases (e.g. random forest class_weight="balanced") <br>
+    * Training models that deal with such cases (e.g. random forest class_weight="balanced") <br>
     * ....
 More work can be done on the data side. In the same way, we can enhance the present work from the models side. For instance : <br>
     * Optimize the hyperparameters, using *Grid Search Cross-Validation*, attached to the
