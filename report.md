@@ -23,7 +23,7 @@ Among the difficulties encountered during the extraction phase : <br>
     * The provided csv file contains the paths to the images and not to the text files <br>
     * Our text files contain many text lines <br>
     * The text files contain stopwords and special characters <br>
-    * We detected missing data from a very few text files
+    * We detected missing data from a very few text files <br>
 To fix these issues, we defined a function named *extract_text* that : <br>
     * loops over the input csv file <br>
     * Changes the image paths to a text paths <br>
